@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kyaw Thet Paing</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar-container">
+            <div class="logo-container">
+                <a href="#" class="logo">KyaX</a>
+            </div>
+
+            <div class="nav-bar-links-container">
+                <a href="#" class="link">Home</a>
+                <a href="#" class="link">Blog</a>
+                <a href="#" class="link">Projects</a>
+                <a href="#" class="link">Contact</a>
+                <a href="#" class="link">About</a>
+            </div>
+
+            <div class="nav-bar-links-toggle-container">
+                <button>
+                    <svg fill="#393939" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792" xml:space="preserve" stroke="#393939" stroke-width="0.01792">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M1673.9,1363.2L1673.9,1363.2c0,52.3-42.4,94.3-94.3,94.3H212.7c-52.3,0-94.3-42.4-94.3-94.3l0,0 c0-52.3,42.4-94.3,94.3-94.3h1366.8C1631.5,1268.5,1673.9,1310.9,1673.9,1363.2z"></path>
+                            <path d="M1673.9,895.6L1673.9,895.6c0,52.3-42.4,94.3-94.3,94.3H659c-52.3,0-94.3-42.4-94.3-94.3l0,0c0-52.3,42.4-94.3,94.3-94.3 h920.6C1631.5,800.8,1673.9,843.2,1673.9,895.6z"></path>
+                            <path d="M1673.9,427.9L1673.9,427.9c0,52.3-42.4,94.3-94.3,94.3H212.7c-52.3,0-94.3-42.4-94.3-94.3l0,0c0-52.3,42.4-94.3,94.3-94.3 h1366.8C1631.5,333.2,1673.9,375.6,1673.9,427.9z"></path>
+                        </g>
+                    </svg>
+                </button>
+                <button>
+                    <svg width="25px" height="25px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#393939">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill="#393939" d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <div class="intro-container">
+            <div class="intro-image-container">
+                <img src="./intro-image.png" alt="img" class="intro-image">
+            </div>
+            <div class="intro-content-container">
+                <h1 class="intro-content-hello">Hello there. I'm </h1>
+                <h1 class="intro-content-name">Kyaw Thet Paing</h1>
+                <h1 class="intro-content-carrier">Full-stack developer and</h1>
+                <h1 class="intro-content-carrier">Software Engineer</h1>
+                <p class="intro-content-msg">I’ll help your business grow more with my passion and experience, so let’s shake hands.</p>
+                <button class="intro-content-chat-btn">Let's Chat</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector('.nav-bar-links-toggle-container');
+        const navBarLinksContainer = document.querySelector('.nav-bar-links-container');
+        const navBarLinks = document.querySelectorAll('.nav-bar-links-container .link');
+
+        toggleBtn.addEventListener('click', () => {
+            toggleBtn.classList.toggle('active');
+            navBarLinksContainer.classList.toggle('show');
+        });
+
+        navBarLinks.forEach((navBarLink) => {
+            navBarLink.addEventListener('mouseover', () => {
+                decreaseOpacity();
+                navBarLink.style.opacity = 1;
+            });
+            navBarLink.addEventListener('mouseout', () => {
+                normalOpacity();
+            });
+        });
+
+        const decreaseOpacity = () => {
+            navBarLinks.forEach((navBarLink) => {
+                navBarLink.style.opacity = 0.5;
+            });
+        };
+
+        const normalOpacity = () => {
+            navBarLinks.forEach((navBarLink) => {
+                navBarLink.style.opacity = 1;
+            });
+        };
+    </script>
+</body>
+</html>
